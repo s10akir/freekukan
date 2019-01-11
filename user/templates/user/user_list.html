@@ -2,7 +2,21 @@
 {% block content %}
     <h1>会員一覧</h1>
 
-    {% for user in object_list %}
-        <p>{{ user.last_name }}{{ user.first_name }}</p>
-    {% endfor %}
+    <table class='table table-striped table-hover'>
+        <tr>
+            <th>ID</th>
+            <th>氏名</th>
+        </tr>
+        
+        {% for user in object_list %}
+            <tr>
+                <td>
+                    {{ user.id }}
+                </td>
+                <td>
+                    {{ user.last_name }}{{ user.first_name }}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
 {% endblock %}
