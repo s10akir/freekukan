@@ -11,7 +11,8 @@
         <p>{{ user.comment }}</p>
     </div>
     <div>
-        <a href='{% url "user:update" user.pk %}'>編集</a>
+        <a href='{% url "user:update" user.pk %}'>編集</a> |
+        <a href='{% url "user:delete" user.pk %}'>削除</a>
     </div>
     <div>
         <a href='{% url "user:index" %}'>一覧へ戻る</a>
