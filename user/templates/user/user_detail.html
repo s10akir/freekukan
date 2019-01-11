@@ -1,0 +1,16 @@
+{% extends './base.html' %}
+{% block content %}
+    <h1>{{ user.last_name }}{{ user.first_name }}</h1>
+    <div>
+        <p>{{ user.last_name_kana }}{{ user.first_name_kana }}</p>
+        <p>{{ user.birth_date }}</p>
+        <p>{{ user.phone }}</p>
+        <p>{{ user.zip_code }}</p>
+        <p>{{ user.region }}</p>
+        <p>{{ user.address }}</p>
+        <p>{{ user.comment }}</p>
+    </div>
+    <div>
+        <a href='{% url "user:index" %}'>一覧</a>
+    </div>
+{% endblock %}
