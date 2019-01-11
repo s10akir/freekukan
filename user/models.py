@@ -26,4 +26,4 @@ class User(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.name
+        return (self.last_name + self.first_name)
