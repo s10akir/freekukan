@@ -6,3 +6,7 @@ from .models import User
 
 class IndexView(generic.ListView):
     model = User
+
+
+class DetailView(generic.DetailView):
+    model = User
